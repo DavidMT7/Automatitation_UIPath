@@ -263,7 +263,7 @@
           <av:Size x:Key="ShapeSize">200,83.2</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Lectura de PDF" sap:VirtualizedContainerService.HintSize="538.4,1389.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence DisplayName="Lectura de PDF" sap:VirtualizedContainerService.HintSize="538.4,1538.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="varTextoPDF" />
           <Variable x:TypeArguments="ui:Image" Name="varImagen" />
@@ -328,6 +328,7 @@
         <upap:ExportPDFPageAsImage DisplayName="Exportar página en PDF como imagen" FileName="cursorpa.pdf" sap:VirtualizedContainerService.HintSize="476,88" sap2010:WorkflowViewState.IdRef="ExportPDFPageAsImage_1" ImageDpi="150" OutputFileName="Cursorpa.jpg" PageNumber="1" />
         <ui:LoadImage DisplayName="Cargar imagen" FileName="Cursorpa.jpg" sap:VirtualizedContainerService.HintSize="476,85.6" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[varImagen]" />
         <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="476,24.8" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[varImagen]" Text="[varTextoPDF]" />
+        <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="476,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[varTextoPDF]" />
       </Sequence>
     </FlowStep>
   </Flowchart>
